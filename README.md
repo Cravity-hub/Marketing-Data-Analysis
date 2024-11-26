@@ -2,6 +2,8 @@
 
 *How can marketing campaign data be leveraged to optimize ad performance, reduce costs, and improve conversion rates across channels and devices?*
 
+![cover-photo](/JPEGS/cover%20photo2.jpg)
+
 ## Introduction
 Businesses continually rely heavily on online marketing campaigns to reach their target audiences, build brand awareness, and drive sales. With multiple channels available, including social media platforms like Facebook, Instagram, and Pinterest, it has become essential for marketing teams to track and analyze their advertising efforts to ensure optimal performance. 
 
@@ -29,6 +31,25 @@ Python was used to connect, create and load the dataset into a PostgreSQL databa
 
 Columns and their descriptions are outlined below.
 
+| Column	| Description|
+| --- | --- 
+| Campaign	| Marketing campaign |
+|Date	|Date for daily ad performance metrics
+|City/Location	| Cities that were targeted by campaign|Latitude	Latitude for the cities
+|Longitude	|Longitude for the cities
+|Channel	|Channel where ads where displayed (Facebook, Instagram, Pinterest)
+|Device	|Device from ads where viewed
+|Ad	| Ads that where used within a campaign
+|Impressions | Daily impressions (times ad was shown to a viewer) for each ad
+|CTR, %	| Daily average click-through rate for each ad
+|Clicks	| Daily clicks for each ad
+|Daily Average CPC |	Daily average cost-per-click for each ad
+|Spend, GBP	| Total daily amount of advertising spending for each ad, in GBP
+|Conversions	| Total daily purchases attributed to a specific ad
+|Total conversion value, GBP	| Total amount in GBP received from purchases attributed to a specific ad
+|Likes	|Total daily likes (or other reactions) per ad 
+|Shares	|Total daily shares per ad. For the simplicities sake, each Pin on Pinterest is counted as a share
+|Comments	|Total daily comments per ad 
 
 # Skills Demonstrated
 
@@ -60,6 +81,14 @@ Prepared a comprehensive Power BI report, summarizing campaign effectiveness, ad
 
 ### Data Transformation:
 * Calculated columns - Conversion rate, engagement rate, and return on Ad spend were created.
+
+$Conversion Rate = \frac{Number \ of \ Conversions}{Number \ of \ Clicks}$ x 100
+
+
+$Engagemeent Rate = \frac{Number \ of \ Likes + Number \ of \ Shares + Number \ of \ Comments}{Number  \ of \ Clicks}$ x 100
+
+$ROAS = \frac{Conversion \ Value}{Spend}$ x 100
+
 * A date table was created to use time intelligence functions.
 ### Data Modeling:
 * Create Relationships: A one-to-many relationship was created between the data table and the marketing data.
@@ -82,7 +111,7 @@ The analysis was structured based on the KPIs Engagement Rate, Conversion Rate, 
 
 ![overview](/JPEGS/overview.jpg)
 
-### Campaign
+### Campaign Season
 
 * Despite campaigns in Fall having the highest Click-Through Rate, 1.35%, Summer had the highest 7.23% Engagement Rate and Fall recorded the lowest Engagement Rate.
 
@@ -152,4 +181,5 @@ Based on these insights, the following recommendations can be made to optimize f
 ## Appendix
 
 
-
+Cover Photo: Photo by <a href="https://unsplash.com/@campaign_creators?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Campaign Creators</a> on <a href="https://unsplash.com/photos/white-printing-paper-with-marketing-strategy-text-yktK2qaiVHI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
